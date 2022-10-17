@@ -15,6 +15,7 @@ namespace FuelQ.Controllers
         { 
             this.customerService = customerService;
         }
+
         // GET: api/<CustomerController>
         [HttpGet]
         public ActionResult<List<Customer>> Get()
