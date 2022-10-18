@@ -16,7 +16,6 @@ namespace FuelQ.Services
             _customers.InsertOne(customer);
             return customer;
         }
-
         public List<Customer> Get()
         {
             return _customers.Find(customer => true).ToList();
