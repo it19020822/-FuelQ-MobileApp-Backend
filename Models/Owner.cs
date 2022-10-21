@@ -18,8 +18,6 @@ namespace FuelQ.Models
         public string OwnerContact { get; set; } = String.Empty;
         [BsonElement("ownerFuelStation")]
         public string OwnerFuelStation { get; set; } = String.Empty;
-        [BsonElement("ownerStationID")]
-        public string OwnerStationID { get; set; } = String.Empty;
         [BsonElement("ownerLocation")]
         public string OwnerLocation { get; set; } = String.Empty;
     }

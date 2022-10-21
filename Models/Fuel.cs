@@ -15,8 +15,8 @@ namespace FuelQ.Models
         [BsonElement("fuelStation")]
         public string fuelStation { get; set; } = String.Empty;
 
-        [BsonElement("date")]
-        public string date { get; set; } = String.Empty;
+        [BsonElement("arrivingDate")]
+        public string arrivingDate { get; set; } = String.Empty;
 
         [BsonElement("arrivingTime")]
         public string arrivingTime { get; set; } = String.Empty;
