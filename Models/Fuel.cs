@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace FuelQ.Models
 {
     public class Fuel
+
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
@@ -26,4 +27,5 @@ namespace FuelQ.Models
         [BsonElement("remainLitres")]
         public string remainLitres { get; set; } = String.Empty;
     }
+
 }
