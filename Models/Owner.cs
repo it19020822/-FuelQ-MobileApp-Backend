@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace FuelQ.Models
 {
     public class Owner 
+
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
@@ -22,4 +23,5 @@ namespace FuelQ.Models
         [BsonElement("ownerLocation")]
         public string OwnerLocation { get; set; } = String.Empty;
     }
+
 }
