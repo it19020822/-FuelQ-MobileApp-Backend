@@ -30,6 +30,11 @@ namespace FuelQ.Services
             return _fuels.Find(fuel => fuel.Id == id).FirstOrDefault();
         }
 
+        public List<Fuel> GetFuelByOwnerEmail(string ownerEmail)
+        {
+            return _fuels.Find(fuel => fuel.ownerEmail == ownerEmail).ToList();
+        }
+
         public void Remove(string id)
         {
             _fuels.DeleteOne(fuel => fuel.Id == id);

@@ -26,6 +26,15 @@ namespace FuelQ.Models
 
         [BsonElement("remainLitres")]
         public string remainLitres { get; set; } = String.Empty;
+
+        [BsonElement("ownerEmail")]
+        public string ownerEmail { get; set; } = String.Empty;
+
+        [BsonElement("customerListEmail")]
+        public string customerListEmail { get; set; } = String.Empty;
+
+        [BsonElement("finishingTime")]
+        public string finishingTime { get; set; } = String.Empty;
     }
 
 }
