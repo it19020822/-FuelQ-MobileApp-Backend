@@ -9,6 +9,5 @@ namespace FuelQ.Services
         Fuel Create(Fuel fuel);
         void Update(string id, Fuel fuel);
         void Remove(string id);
-        List<Fuel> GetFuelByOwnerEmail(string ownerEmail);
     }
 }

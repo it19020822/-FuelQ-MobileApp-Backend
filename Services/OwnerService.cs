@@ -27,11 +27,6 @@ namespace FuelQ.Services
             return  _owners.Find(owner => owner.Id == id).FirstOrDefault();
         }
 
-        public Owner GetByEmail(string email)
-        {
-            return _owners.Find(owner => owner.OwnerEmail == email).FirstOrDefault();
-        }
-
         public void Remove(string id)
         {
              _owners.DeleteOne(owner => owner.Id == id);
