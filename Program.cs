@@ -47,8 +47,21 @@ builder.Services.AddScoped<IFuelService, FuelService>();
 
 //--------------------------------------------------------------
 
-builder.Services.AddControllers();
+// Add feedback services to the container.
+builder.Services.Configure<FeedbackStoreDatabaseSettings>(
+    builder.Configuration.GetSection(nameof(FeedbackStoreDatabaseSettings)));
 
+builder.Services.AddSingleton<IFeedbackStoreDatabaseSettings>(sp =>
+    sp.GetRequiredService<IOptions<FeedbackStoreDatabaseSettings>>().Value);
+
+builder.Services.AddSingleton<IMongoClient>(s =>
+    new MongoClient(builder.Configuration.GetValue<string>("FeedbackStoreDatabaseSettings:ConnectionString")));
+
+builder.Services.AddScoped<IFeedbackService, FeedbackService>();
+
+//--------------------------------------------------------------
+
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
