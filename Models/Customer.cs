@@ -1,4 +1,10 @@
-﻿using MongoDB.Bson;
+﻿/*
+  -------------------
+    CUSTOMER MODEL
+  -------------------
+*/
+
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 namespace FuelQ.Models
 {
@@ -37,5 +43,8 @@ namespace FuelQ.Models
 
         [BsonElement("requestedLitres")]
         public int RequestedLitres { get; set; } = 0;
+
+        [BsonElement("shedQ")]
+        public string ShedQ { get; set; } = String.Empty;
     }
 }
