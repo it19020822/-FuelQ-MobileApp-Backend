@@ -22,5 +22,20 @@ namespace FuelQ.Models
         
         [BsonElement("customerFuelType")]
         public string CustomerFuelType { get; set; } = String.Empty;
+
+        [BsonElement("awaitingTime")]
+        public string AwaitingTime { get; set; } = String.Empty;
+
+        [BsonElement("token")]
+        public int Token { get; set; } = 0;
+
+        [BsonElement("arrivalTimeQ")]
+        public string ArrivalTimeQ { get; set; } = String.Empty;
+
+        [BsonElement("departTimeQ")]
+        public string DepartTimeQ { get; set; } = String.Empty;
+
+        [BsonElement("requestedLitres")]
+        public int RequestedLitres { get; set; } = 0;
     }
 }
