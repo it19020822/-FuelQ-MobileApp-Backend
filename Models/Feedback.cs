@@ -1,4 +1,10 @@
-﻿using MongoDB.Bson;
+﻿/*
+  -------------------
+    FEEDBACK MODEL
+  -------------------
+*/
+
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 namespace FuelQ.Models
 {

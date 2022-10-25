@@ -1,4 +1,10 @@
-﻿using FuelQ.Models;
+﻿/*
+  --------------------
+    FUEL CONTROLLER
+  --------------------
+*/
+
+using FuelQ.Models;
 using FuelQ.Services;
 using Microsoft.AspNetCore.Mvc;
 
