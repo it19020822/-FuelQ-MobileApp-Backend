@@ -37,6 +37,11 @@ namespace FuelQ.Services
             return _customers.Find(customer => customer.Id == id).FirstOrDefault();
         }
 
+        public List<Customer> GetByShedName(string shedName)
+        {
+            return _customers.Find(customer => customer.ShedQ == shedName).ToList();
+        }
+
         //Remove Customer by ID
         public void Remove(string id)
         {

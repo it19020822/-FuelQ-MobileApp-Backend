@@ -9,5 +9,6 @@ namespace FuelQ.Services
         Customer Create(Customer customer);
         void Update(string id, Customer customer);
         void Remove(string id);
+        List<Customer> GetByShedName(string shedName);
     }
 }
