@@ -39,6 +39,18 @@ namespace FuelQ.Controllers
             return owner;
         }
 
+        [HttpGet("/OwnerService/{email}")]
+        public ActionResult<Owner> GetByEmail(string email)
+        {
+            var owner = ownerService.GetByEmail(email);
+
+            if (owner == null)
+            {
+                return NotFound($"Owner with Email = {email} not found!!!");
+            }
+            return owner;
+        }
+
         // POST api/<OwnerController>
         [HttpPost]
         public ActionResult<Owner> Post([FromBody] Owner owner)
