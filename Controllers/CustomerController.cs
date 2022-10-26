@@ -39,6 +39,12 @@ namespace FuelQ.Controllers
             return customer;
         }
 
+        [HttpGet("/CustomerService/{shedName}")]
+        public ActionResult<List<Customer>> GetByShedName(string shedName)
+        {
+            return customerService.GetByShedName(shedName);
+        }
+
         // POST api/<CustomerController>
         [HttpPost]
         public ActionResult<Customer> Post([FromBody] Customer customer)
