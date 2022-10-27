@@ -38,10 +38,9 @@ namespace FuelQ.Services
             return _fuels.Find(fuel => fuel.Id == id).FirstOrDefault();
         }
 
-        //Get Fuel by Station
-        public Fuel GetByStation(string station)
+        public List<Fuel> GetByStation(string station)
         {
-            return _fuels.Find(fuel => fuel.fuelStation == station).FirstOrDefault();
+            return _fuels.Find(fuel => fuel.fuelStation == station).ToList();
         }
 
         //Remove Fuel by ID
