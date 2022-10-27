@@ -40,15 +40,9 @@ namespace FuelQ.Controllers
         }
 
         [HttpGet("/FuelService/{station}")]
-        public ActionResult<Fuel> GetByStation(string station)
+        public ActionResult<List<Fuel>> GetByStation(string station)
         {
-            var fuel = fuelService.GetByStation(station);
-
-            if (fuel == null)
-            {
-                return NotFound($"Fuel with Station = {station} not found!!!");
-            }
-            return fuel;
+            return fuelService.GetByStation(station);
         }
 
         // POST api/<FuelController>
