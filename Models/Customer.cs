@@ -21,7 +21,7 @@ namespace FuelQ.Models
         public string CustomerPassword { get; set; } = String.Empty;
 
         [BsonElement("customerVehicleNumber")]
-        public string CustomerVehicleNumber { get; set; } = String.Empty;
+        public int CustomerVehicleNumber { get; set; } = 0;
 
         [BsonElement("customerVehicleType")]
         public string CustomerVehicleType { get; set; } = String.Empty;
@@ -33,7 +33,7 @@ namespace FuelQ.Models
         public string AwaitingTime { get; set; } = String.Empty;
 
         [BsonElement("token")]
-        public string Token { get; set; } = String.Empty;
+        public int Token { get; set; } = 0;
 
         [BsonElement("arrivalTimeQ")]
         public string ArrivalTimeQ { get; set; } = String.Empty;
@@ -42,7 +42,7 @@ namespace FuelQ.Models
         public string DepartTimeQ { get; set; } = String.Empty;
 
         [BsonElement("requestedLitres")]
-        public string RequestedLitres { get; set; } = String.Empty;
+        public int RequestedLitres { get; set; } = 0;
 
         [BsonElement("shedQ")]
         public string ShedQ { get; set; } = String.Empty;
