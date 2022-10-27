@@ -1,4 +1,10 @@
-﻿using FuelQ.Models;
+﻿/*
+  --------------------
+    OWNER CONTROLLER
+  --------------------
+*/
+
+using FuelQ.Models;
 using FuelQ.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,6 +35,18 @@ namespace FuelQ.Controllers
             if (owner == null)
             {
                 return NotFound($"Owner with Id = {id} not found!!!");
+            }
+            return owner;
+        }
+
+        [HttpGet("/OwnerService/{email}")]
+        public ActionResult<Owner> GetByEmail(string email)
+        {
+            var owner = ownerService.GetByEmail(email);
+
+            if (owner == null)
+            {
+                return NotFound($"Owner with Email = {email} not found!!!");
             }
             return owner;
         }

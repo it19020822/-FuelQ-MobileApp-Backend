@@ -1,8 +1,12 @@
-﻿using FuelQ.Models;
+﻿/*
+  -------------------
+  CUSTOMER CONTROLLER
+  -------------------
+*/
+
+using FuelQ.Models;
 using FuelQ.Services;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace FuelQ.Controllers
 {
@@ -34,6 +38,12 @@ namespace FuelQ.Controllers
                 return NotFound($"Customer with Id = {id} not found!!!");
             }
             return customer;
+        }
+
+        [HttpGet("/CustomerService/{shedName}")]
+        public ActionResult<List<Customer>> GetByShedName(string shedName)
+        {
+            return customerService.GetByShedName(shedName);
         }
 
         // POST api/<CustomerController>
